@@ -1,0 +1,4 @@
+#j_line.am-list-static.am-list-border li{padding:0.2rem 0.3rem;}
+#j_line li i{font-style:normal;}
+#j_line li i:first-child{color:#DD514C;min-width:20px;}
+#j_line li i:not(:first-child){color:#3BB4F2;}

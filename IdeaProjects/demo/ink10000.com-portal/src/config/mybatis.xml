@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="aggressiveLazyLoading" value="true"/>
+		<setting name="autoMappingBehavior" value="PARTIAL"/>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="defaultExecutorType" value="SIMPLE"/>
+		<setting name="defaultStatementTimeout" value="2500"/>
+		<setting name="multipleResultSetsEnabled" value="true"/>
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="useColumnLabel" value="true"/>
+		<setting name="useGeneratedKeys" value="false"/>
+	</settings>
+	<mappers>
+		<mapper resource="com/mc/core/dao/auth/mapper/AccountMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/ApplyMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/EnjoyMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/EventMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/FeedbackMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/GroupMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auth/mapper/PowerMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/BoundMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/DependMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/DriverMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/FieldMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/GenreMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/InwardMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/MemberMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/ModuleMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/ProjectMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/TableMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/TemplateMapper.xml"/>
+		<mapper resource="com/mc/core/dao/auto/mapper/WorkMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/ArticleMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/BoardMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/CatenaMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/CloudMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/CodeMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/LocatorMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/MovieMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/MusicMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/PlayerMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/QuarryMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/SexyMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/SheetMapper.xml"/>
+		<mapper resource="com/mc/core/dao/blog/mapper/TicketMapper.xml"/>
+		<mapper resource="com/mc/core/dao/file/mapper/EnrollMapper.xml"/>
+		<mapper resource="com/mc/core/dao/file/mapper/EntryMapper.xml"/>
+		<mapper resource="com/mc/core/dao/file/mapper/LotteryMapper.xml"/>
+		<mapper resource="com/mc/core/dao/file/mapper/RegionMapper.xml"/>
+		<mapper resource="com/mc/core/dao/site/mapper/ConfigMapper.xml"/>
+		<mapper resource="com/mc/core/dao/site/mapper/DailyMapper.xml"/>
+		<mapper resource="com/mc/core/dao/site/mapper/DonateMapper.xml"/>
+	</mappers>
+</configuration>

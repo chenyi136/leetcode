@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>jeDate日期控件</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="skin/jedate.css">
+	<script type="text/javascript" src="jedate-3.4.0.js"></script>
+<style type="text/css">
+li{margin:15px;line-height:24px;}
+input{width:200px;height:30px;border:1px solid #CCC;}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="http://www.jayui.com/jedate/">jeDate日期控件API</a></li>
+	<li><input type="text" readonly="readonly" placeholder="YYYY" id="date1"></li>
+	<li><input type="text" readonly="readonly" placeholder="开始日期" id="date2"></li>
+	<li><input type="text" readonly="readonly" placeholder="结束日期" id="date3"></li>
+	<li><input type="text" readonly="readonly" placeholder="YYYY-MM-DD hh:mm:ss" id="date4"></li>
+	<li><input type="text" readonly="readonly" placeholder="YYYY-MM-DD hh:mm" id="date5"></li>
+	<li><input type="text" readonly="readonly" placeholder="YYYY-MM-DD" id="date6"></li>
+	<li><input type="text" readonly="readonly" placeholder="YYYY-MM" id="date7"></li>
+	<li><input type="text" readonly="readonly" placeholder="hh:mm:ss" id="date8"></li>
+	<li><input type="text" readonly="readonly" placeholder="hh:mm" id="date9"></li>
+</ul>
+<script type="text/javascript">
+jeDate({dateCell:"#date1",fixed:false,format:"YYYY",isClear:true,maxDate:"2017-06-16 23:59:59",minDate:"2013-06-30 23:59:59"});
+var start={
+	dateCell:"#date2",
+	festival:true,
+	format:"YYYY-MM-DD hh时mm分ss秒",
+	ishmsVal:false,
+	isinitVal:true,
+	maxDate:"2099-06-30 23:59:59",
+	minDate:jeDate.now(0),
+	skinCell:"jedategreen",
+	choosefun:function(elem,datas){
+		end.minDate=datas;
+	}
+};
+var end={
+	dateCell:"#date3",
+	festival:true,
+	format:"YYYY年MM月DD日 hh:mm:ss",
+	maxDate:"2099-06-16 23:59:59",
+	minDate:jeDate.now(0),
+	skinCell:"jedatered",
+	choosefun:function(elem,datas){
+		start.maxDate=datas;
+	}
+};
+jeDate(start);
+jeDate(end);
+jeDate({dateCell:"#date4",format:"YYYY年MM月DD日 hh:mm:ss",isClear:true});
+jeDate({dateCell:"#date5",format:"YYYY-MM-DD hh:mm",isinitVal:true});
+jeDate({dateCell:"#date6",format:"YYYYMMDD",isinitVal:true});
+jeDate({dateCell:"#date7",format:"YYYY-MM"});
+jeDate({dateCell:"#date8",format:"hh:mm:ss",isinitVal:true});
+jeDate({dateCell:"#date9",format:"hh:mm"});
+</script>
+</body>
+</html>

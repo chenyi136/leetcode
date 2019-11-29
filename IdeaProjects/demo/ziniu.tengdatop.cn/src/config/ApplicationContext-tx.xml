@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="batch" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="delete" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="trash" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="merge" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="update" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="alter" propagation="REQUIRED" rollback-for="Exception"/>
+			<tx:method name="*" read-only="true"/>
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:advisor pointcut="execution(* com.ziniu.dao.*.*.*(..))" advice-ref="transactionAdvice"/>
+	</aop:config>
+</beans>

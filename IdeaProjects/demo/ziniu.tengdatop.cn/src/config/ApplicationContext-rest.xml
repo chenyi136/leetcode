@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+				<!--从请求和响应读取、编写字符串，支持媒体类型text/*并使用文本、无格式内容类型编写-->
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+					<constructor-arg value="UTF-8"/>
+				</bean>
+				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter"/>
+				<!--使用ROME的Feed API读取、编写ATOM源，转换媒体类型为application/atom+xml的数据-->
+				<!--<bean class="org.springframework.http.converter.feed.AtomFeedHttpMessageConverter"/>-->
+				<!--使用ROME的Feed API读取、编写RSS源，转换媒体类型为application/rss+xml的数据-->
+				<!--<bean class="org.springframework.http.converter.feed.RssChannelHttpMessageConverter"/>-->
+				<!--<bean class="org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter"/>-->
+				<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+				<!--使用Jackson的ObjectMapper读取、编写JSON数据，转换媒体类型为application/json的数据-->
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+				<!--<bean class="org.springframework.http.converter.json.GsonHttpMessageConverter"/>-->
+				<!--从请求和响应读取、编写表单数据，读取媒体类型application/x-www-form-urlencoded并将数据写入MultiValueMap<String, String>-->
+				<bean class="org.springframework.http.converter.FormHttpMessageConverter">
+					<property name="partConverters">
+						<list>
+							<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+								<constructor-arg value="UTF-8"/>
+							</bean>
+						</list>
+					</property>
+				</bean>
+				<!--使用Spring的marshaller()和un-marshaller()读取、编写XML数据，转换媒体类型为application/xml的数据-->
+				<!--<bean class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter"/>-->
+			</list>
+		</property>
+	</bean>
+</beans>

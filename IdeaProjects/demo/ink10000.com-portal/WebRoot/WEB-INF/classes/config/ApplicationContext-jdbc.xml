@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${JDBC_DRIVER}"/>
+		<property name="initialPoolSize" value="3"/>
+		<property name="jdbcUrl" value="${JDBC_URL}"/>
+		<property name="maxIdleTime" value="28200"/>
+		<property name="maxPoolSize" value="20"/>
+		<property name="maxStatements" value="100"/>
+		<property name="maxStatementsPerConnection" value="10"/>
+		<property name="minPoolSize" value="3"/>
+		<property name="password" value="${JDBC_PASSWORD}"/>
+		<property name="user" value="${JDBC_USERNAME}"/>
+	</bean>
+</beans>

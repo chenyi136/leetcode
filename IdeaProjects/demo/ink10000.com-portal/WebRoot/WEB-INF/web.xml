@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0" id="WebApp_ID">
+	<display-name>ink10000.com-portal</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 全局参数 -->
+	<context-param>
+		<param-name>SITE</param-name>
+		<param-value>综合管理</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ROOT</param-name>
+		<param-value>http://127.0.0.1:8088/ink10000.com-portal/</param-value>
+	</context-param>
+	<!-- 启动配置 -->
+	<servlet>
+		<servlet-name>SpringMVC</servlet-name>
+		<servlet-class>com.mc.portal.StartListener</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>org.springframework.web.context.support.XmlWebApplicationContext</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:ApplicationContext.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SpringMVC</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	<!-- 会话时长 -->
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+	<!-- 静态资源 -->
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/_/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/data/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/doc/image/*</url-pattern>
+	</servlet-mapping>
+	<!-- 错误页面 -->
+	<error-page>
+		<error-code>400</error-code>
+		<location>/global/error.htm?code=400</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/global/error.htm?code=403</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/global/error.htm?code=404</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/global/error.htm?code=405</location>
+	</error-page>
+	<error-page>
+		<error-code>415</error-code>
+		<location>/global/error.htm?code=405</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/global/error.htm?code=500</location>
+	</error-page>
+</web-app>

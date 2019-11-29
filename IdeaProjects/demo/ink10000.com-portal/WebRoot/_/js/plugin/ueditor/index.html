@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>完整代码</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="ueditor.config.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="ueditor.all.min-1.4.3.3.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="lang/zh-cn/zh-cn.js" charset="UTF-8"></script>
+<style type="text/css">
+div{margin-top:5px;width:100%;}
+</style>
+</head>
+<body>
+<h1>完整demo</h1>
+<textarea style="width:1200px;height:300px;" id="editor"></textarea>
+<section id="btns">
+	<div>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').hasContents());">判断是否输入内容</button>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').getAllHtml());">获得整个页面内容</button>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').getContent());">获得编辑输入内容</button>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').getPlainTxt());">获得带换行的内容</button>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').getContentTxt());">获得纯文本的内容</button>
+		<button onclick="javascript:UE.getEditor('editor').selection.getRange().select();window.alert(UE.getEditor('editor').selection.getText());">获得当前选中文本</button>
+		<button onclick="javascript:UE.getEditor('editor').setContent('欢迎使用ueditor');">向编辑框写入内容</button>
+		<button onclick="javascript:UE.getEditor('editor').setContent('欢迎使用ueditor',true);">向编辑框追加内容</button>
+		<button onclick="javascript:UE.getEditor('editor').execCommand('insertHtml',window.prompt('插入html代码',''));">向编辑框插入内容</button>
+		<button onclick="javascript:UE.getEditor('editor').setHeight(300);">设置编辑框的高度</button>
+	</div>
+	<div>
+		<button onclick="javascript:UE.getEditor('editor').focus();">使编辑器获得焦点</button>
+		<button onmousedown="javascript:UE.getEditor('editor').blur();UE.dom.domUtils.preventDefault(e);">使编辑器失去焦点</button>
+		<button onmousedown="javascript:window.alert(UE.getEditor('editor').isFocus());UE.dom.domUtils.preventDefault(e);">编辑器获得焦点吗</button>
+		<button id="enable" onclick="javascript:button();UE.getEditor('editor').setEnabled();">使编辑框可以编辑</button>
+		<button onclick="javascript:button('enable');UE.getEditor('editor').setDisabled('fullscreen');">使编辑框不可编辑</button>
+		<button onclick="javascript:UE.getEditor('editor').setHide();">使内容编辑器隐藏</button>
+		<button onclick="javascript:UE.getEditor('editor').setShow();">使内容编辑器显示</button>
+		<button onclick="javascript:window.alert(UE.getEditor('editor').execCommand('getlocaldata'));">获取草稿箱的内容</button>
+		<button onclick="javascript:UE.getEditor('editor').execCommand('clearlocaldata');">清空草稿箱的内容</button>
+	</div>
+</section>
+<div>
+	<button onclick="javascript:button();UE.getEditor('editor');">创建富文本编辑器</button>
+	<button onclick="javascript:button('-1');UE.getEditor('editor').destroy();">删除富文本编辑器</button>
+</div>
+<script type="text/javascript">
+UE.getEditor("editor");
+function button(key){
+	var btns=UE.dom.domUtils.getElementsByTagName(document.getElementById("btns"),"button");
+	if(key){
+		for(var i=0;i<btns.length;i++){
+			var btn=btns[i];
+			if(btn.id==key){
+				UE.dom.domUtils.removeAttributes(btn,["disabled"]);
+			}else{
+				btn.setAttribute("disabled","true");
+			}
+		}
+	}else{
+		for(var i=0;i<btns.length;i++){
+			UE.dom.domUtils.removeAttributes(btns[i],["disabled"]);
+		}
+	}
+}
+</script>
+</body>
+</html>

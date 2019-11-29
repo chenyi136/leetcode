@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+					<constructor-arg value="UTF-8"/>
+				</bean>
+				<bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+				<bean class="org.springframework.http.converter.FormHttpMessageConverter">
+					<property name="partConverters">
+						<list>
+							<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+								<constructor-arg value="UTF-8"/>
+							</bean>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+</beans>

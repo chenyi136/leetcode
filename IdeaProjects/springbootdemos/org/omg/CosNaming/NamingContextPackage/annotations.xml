@@ -1,0 +1,5 @@
+<root>
+    <item name='org.omg.CosNaming.NamingContextPackage.NotEmpty'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

@@ -1,0 +1,38 @@
+html,body{height:100%;overflow:hidden;}
+a{cursor:pointer;}
+footer{font-size:90%;color:#777;}
+.am-alert{margin:0;}
+.am-popover{max-width:50%;}
+.am-popup{z-index:9999;}
+.ztree{width:100%;background:#F0F6E4;border:1px solid #617775;overflow-y:scroll;overflow-x:auto;}
+.j_left{right:auto;left:4px;opacity:0.5;cursor:pointer;}
+.j_popup{padding-bottom:1.5rem;height:auto;}
+.j_block .am-input-group{margin:0 auto;width:60%;}
+.j_block table{margin:0 auto;padding:0;width:100%;}
+.j_block tr:first-child{border-top:1px solid #999;}
+.j_block th,.j_block td{border-bottom:1px solid #999;border-left:1px solid #999;text-align:center;}
+.j_block th:first-child,.j_block td:first-child{border-left:none;}
+.j_block th{background-color:rgba(14,144,210,0.115);color:#0B76AC;}
+#j_alert{position:fixed;top:0;margin:0 auto;width:100%;text-align:center;z-index:2;}
+#j_deep input{width:100%;height:36px;padding-left:5px;border:none;font-size:14px;}
+#j_deep input:focus{outline:none;}
+#j_head{position:fixed;top:0;right:0;left:0;margin-bottom:0;font-size:1.4rem;z-index:1;}
+#j_head a:hover :after{content:none;}
+#j_head .am-topbar-right{margin:0;}
+#j_head .am-dropdown-content{min-width:130px;}
+#j_hold{position:relative;padding-top:51px;height:100%;}
+#j_menu{width:200px;height:100%;overflow-x:none;overflow-y:scroll;float:left;}
+#j_menu ul{margin:0;}
+#j_menu li:first-child{border-top:none;}
+#j_menu li a{padding-left:12px;}
+#j_menu li a:hover,#j_menu li a:active{background:#E4E4E4;}
+#j_menu li ul{padding-left:15px;background:#ECECEC;}
+#j_menu li ul li:first-child{border-top:1px solid #DEDEDE;}
+#j_right{padding:0.5rem;height:100%;overflow-x:hidden;overflow-y:scroll;}
+#j_right>.am-breadcrumb{margin:0;padding:0;width:70%;display:inline-block;}
+#j_right>.am-breadcrumb i{cursor:pointer;}
+#j_right>i{cursor:pointer;float:right;}
+#j_top{bottom:4px;cursor:pointer;}
+::-webkit-scrollbar{width:6px;height:6px;background-color:#F5F5F5;}
+::-webkit-scrollbar-track{background-color:#F5F5F5;border-radius:2px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);}
+::-webkit-scrollbar-thumb{background-color:#555;border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);}

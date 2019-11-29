@@ -1,0 +1,15 @@
+.am-form-horizontal .am-form-feedback [class*='am-icon-']{right:0.4em;}
+#j_form .am-u-md-6{padding:0;}
+#j_form .am-u-md-6>.am-form-group:last-child{margin-bottom:0;}
+#j_form .am-u-md-6>.am-form-group>.am-u-md-3{padding-top:0.6em;padding-left:0;line-height:100%;vertical-align:middle;}
+#j_form .am-u-md-6>.am-form-group>.am-u-md-9{padding-right:0;padding-left:0;}
+#j_form .am-form-group>.am-btn{margin-right:0.5rem;}
+#j_form .am-form-group>.am-btn:last-child{margin-right:0;}
+#j_form .am-selected-list .am-icon-check{padding-top:0.8em;}
+#j_form .am-selected-list .am-checked .am-icon-check{padding-top:0.8em;}
+#j_form .am-btn-group.j-radio label{width:50%;color:#FFF;}
+#j_form .am-btn-group.j-radio label.am-active{color:#FF0;}
+#j_form .am-btn-group.j-checkbox label{padding:0.5em 0.1em;color:#FFF;overflow:hidden;}
+#j_form .am-btn-group.j-checkbox label.am-active{color:#FF0;}
+#j_form .am-btn-group.am-btn-group-sm.j-checkbox label{margin:0 0.5% 1% 0.5%;width:19%;}
+#j_form .am-btn-group.am-btn-group-xs.j-checkbox label{margin:0 0.3% 0.7% 0.3%;width:16%;}

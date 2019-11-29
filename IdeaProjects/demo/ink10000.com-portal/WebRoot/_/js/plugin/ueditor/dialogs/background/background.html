@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="background.css">
+</head>
+<body>
+<div class="wrapper" id="bg_container">
+	<div class="tabhead" id="tabHeads">
+		<span class="focus" data-content-id="normal"><var id="lang_background_normal"></var></span>
+		<span data-content-id="imgManager"><var id="lang_background_local"></var></span>
+	</div>
+	<div class="tabbody" id="tabBodys">
+		<div class="panel focus" id="normal">
+			<fieldset class="bgarea">
+				<legend><var id="lang_background_set"></var></legend>
+				<div class="content">
+					<div>
+						<label><input type="radio" class="iptradio" value="none" checked="checked" name="t" id="nocolorRadio"><var id="lang_background_none"></var></label>
+						<label><input type="radio" class="iptradio" value="color" name="t" id="coloredRadio"><var id="lang_background_colored"></var></label>
+					</div>
+					<div class="wrapcolor pl">
+						<div class="color"><var id="lang_background_color"></var>:</div>
+						<div id="colorPicker"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="wrapcolor pl">
+						<label><var id="lang_background_netimg"></var>:</label>
+						<input type="text" class="txt" id="url">
+					</div>
+					<div class="alignment" id="alignment">
+						<var id="lang_background_align"></var>:<select id="repeatType">
+							<option value="center"></option>
+							<option value="repeat-x"></option>
+							<option value="repeat-y"></option>
+							<option value="repeat"></option>
+							<option value="self"></option>
+						</select>
+					</div>
+					<div id="custom"><var id="lang_background_position"></var>:x:<input type="text" value="0" maxlength="4" size="1" id="x">px&nbsp;&nbsp;y:<input type="text" value="0" maxlength="4" size="1" id="y">px</div>
+				</div>
+			</fieldset>
+		</div>
+		<div class="panel" id="imgManager"><div id="imageList"></div></div>
+	</div>
+</div>
+<script type="text/javascript" src="../internal.js"></script>
+<script type="text/javascript" src="background.js"></script>
+</body>
+</html>

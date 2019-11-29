@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API 文档 [zTree --  jQuery 树插件]</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/zTreeStyleForApi.css">
+</head>
+<body>
+<div style="padding-top:30px;" class="header_wrap" id="header_wrap">
+	<div class="header round" id="header">
+		<div class="light-bulb"></div>
+		<div class="header-text">
+			<h1><em>zTree v3.5.21 API 文档</em></h1><p></p>
+			<p>all.js = core + excheck + exedit ( 不包括 exhide ); 发现错误请及时通知，谢谢。</p>
+		</div>
+		<ul style="top:0;" class="shortcuts language"><li><a href="javascript:;"><button type="button" class="ico en"></button></a></li></ul>
+	</div>
+</div>
+<div class="content_wrap" id="content_wrap">
+	<div class="content" id="content">
+		<div class="nav_section">
+			<ul>
+				<li class="first">注释：</li>
+				<li><button class="ico16 z_core"></button><span>core 核心包</span></li>
+				<li><button class="ico16 z_check"></button><span>excheck 扩展</span></li>
+				<li><button class="ico16 z_edit"></button><span>exedit 扩展</span></li>
+				<li><button class="ico16 z_hide"></button><span>exhide 扩展</span></li>
+				<li class="noline">
+					<button class="ico16 z_search"></button>
+					<input type="text" class="searchKey search empty">
+					<input type="text" class="searchResult search">
+					<button class="ico16 searchPrev disabled"></button>
+					<button class="ico16 searchNext disabled"></button>
+				</li>
+			</ul>
+		</div>
+		<div class="contentBox round clearfix" id="contentBox">
+			<div class="apiContent" id="apiContent">
+				<div class="api_setting left" id="api_setting">
+					<ul class="api_content_title"><li>setting 配置详解</li></ul>
+					<ul class="ztree" id="settingTree"></ul>
+				</div>
+				<div class="api_function right" id="api_function">
+					<ul class="api_content_title"><li>zTree 方法详解</li></ul>
+					<ul class="ztree" id="functionTree"></ul>
+					<ul class="api_content_title"><li>treeNode 节点数据详解</li></ul>
+					<ul class="ztree" id="treenodeTree"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="baby_overlay" id="overlayDiv">
+	<div class="content round clearfix" id="overlayContent">
+		<div class="overlaySearch">
+			<button class="ico16 z_search"></button>
+			<input type="text" class="searchKey search empty">
+			<input type="text" class="searchResult search">
+			<button class="ico16 searchPrev disabled"></button>
+			<button class="ico16 searchNext disabled"></button>
+		</div>
+		<a class="close" id="overlayDivCloseBtn"></a>
+		<div class="details" id="overlayDetailDiv"></div>
+	</div>
+	<div class="baby_overlay_arrow" id="overlayDivArrow"></div>
+</div>
+<script type="text/javascript">
+var ie=false;
+if(ie){
+	document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"apiCss/common_ie6.css\">");
+}
+</script>
+<script type="text/javascript" src="../../../jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="../jquery.ztree.core.min-3.5.21.js"></script>
+<script type="text/javascript" src="css/api.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	apiContent._init();
+});
+</script>
+</body>
+</html>

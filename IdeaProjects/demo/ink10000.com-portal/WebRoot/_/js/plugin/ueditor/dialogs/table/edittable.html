@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="edittable.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="left">
+		<div class="section">
+			<h3><var id="lang_tableStyle"></var></h3>
+			<ul>
+				<li>
+					<label onselectstart="javascript:return false;">
+						<input type="checkbox" name="style" id="J_title">
+						<var id="lang_insertTitle"></var>
+					</label>
+				</li>
+				<li>
+					<label onselectstart="javascript:return false;">
+						<input type="checkbox" name="style" id="J_titleCol">
+						<var id="lang_insertTitleCol"></var>
+					</label>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<label onselectstart="javascript:return false;">
+						<input type="checkbox" name="style" id="J_caption">
+						<var id="lang_insertCaption"></var>
+					</label>
+				</li>
+				<li>
+					<label onselectstart="javascript:return false;">
+						<input type="checkbox" name="style" id="J_sorttable">
+						<var id="lang_orderbycontent"></var>
+					</label>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="section">
+			<h3><var id="lang_tableSize"></var></h3>
+			<ul>
+				<li>
+					<label>
+						<input type="radio" name="size" id="J_autoSizeContent">
+						<var id="lang_autoSizeContent"></var>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="size" id="J_autoSizePage">
+						<var id="lang_autoSizePage"></var>
+					</label>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="section">
+			<h3><var id="lang_borderStyle"></var></h3>
+			<ul>
+				<li>
+					<span><var id="lang_color"></var></span>
+					<input type="text" class="tone" readonly="readonly" id="J_tone">
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="section">
+			<h3><var id="lang_example"></var></h3>
+			<div class="preview" id="J_preview"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../internal.js"></script>
+<script type="text/javascript" src="edittable.js"></script>
+</body>
+</html>

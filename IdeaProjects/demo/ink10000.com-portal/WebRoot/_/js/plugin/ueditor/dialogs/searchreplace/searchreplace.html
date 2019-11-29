@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<style type="text/css">
+.warpper{position:relative;margin:10px auto;width:380px;height:100%;}
+.tabbody{height:160px;}
+.tabbody table{width:100%;border-collapse:separate;border-spacing:3px;}
+.tabbody .panel{position:absolute;padding-left:5px;width:373px;height:100%;background-color:#FFF;}
+.tabbody input.int{width:190px;height:21px;border:1px solid #D7D7D7;line-height:21px;}
+.tabbody input.btn{padding:0 5px;height:24px;background:url("../../themes/default/images/dialog-title-bg.png") repeat-x;border:1px solid #CCC;line-height:24px;text-decoration:none;text-align:center;}
+</style>
+</head>
+<body>
+<div class="warpper" id="searchtab">
+	<div class="tabhead" id="head">
+		<span class="focus" tabsrc="find"><var id="lang_tab_search"></var></span>
+		<span tabsrc="replace"><var id="lang_tab_replace"></var></span>
+	</div>
+	<div class="tabbody">
+		<div class="panel" id="find">
+			<table>
+				<tr>
+					<td style="width:80px;"><var id="lang_search1"></var>: </td>
+					<td><input type="text" class="int" id="findtxt"></td>
+				</tr>
+				<tr>
+					<td><var id="lang_case_sensitive1"></var></td>
+					<td><input type="checkbox" id="matchCase"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" class="btn" id="nextFindBtn">
+						<input type="button" class="btn" id="preFindBtn">
+					</td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr><td colspan="2"><span style="color:red;" id="search-msg"></span></td></tr>
+			</table>
+		</div>
+		<div class="panel" id="replace">
+			<table>
+				<tr>
+					<td style="width:80px;"><var id="lang_search2"></var>: </td>
+					<td><input type="text" class="int" id="findtxt1"></td>
+				</tr>
+				<tr>
+					<td><var id="lang_replace"></var>: </td>
+					<td><input type="text" class="int" id="replacetxt"></td>
+				</tr>
+				<tr>
+					<td><var id="lang_case_sensitive2"></var></td>
+					<td><input type="checkbox" id="matchCase1"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" class="btn" id="nextReplaceBtn">
+						<input type="button" class="btn" id="preReplaceBtn">
+						<input type="button" class="btn" id="repalceBtn">
+						<input type="button" class="btn" id="repalceAllBtn">
+					</td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr><td colspan="2"><span style="color:red;" id="replace-msg"></span></td></tr>
+			</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../internal.js"></script>
+<script type="text/javascript" src="searchreplace.js"></script>
+</body>
+</html>

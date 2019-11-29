@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="charts.css">
+</head>
+<body>
+<div class="main">
+	<div class="table-view">
+		<h3><var id="lang_data_source"></var></h3>
+		<div class="table-container" id="tableContainer"></div>
+		<h3><var id="lang_chart_format"></var></h3>
+		<form name="data-form">
+			<div class="charts-format">
+				<fieldset>
+					<legend><var id="lang_data_align"></var></legend>
+					<div class="format-item-container">
+						<label>
+							<input type="radio" class="format-ctrl not-pie-item" value="1" checked="checked" name="charts-format">
+							<var id="lang_chart_align_same"></var>
+						</label>
+						<label>
+							<input type="radio" class="format-ctrl not-pie-item" value="-1" name="charts-format">
+							<var id="lang_chart_align_reverse"></var>
+						</label>
+						<br>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend><var id="lang_chart_title"></var></legend>
+					<div class="format-item-container">
+						<label>
+							<var id="lang_chart_main_title"></var>
+							<input type="text" class="data-item" name="title">
+						</label>
+						<label>
+							<var id="lang_chart_sub_title"></var>
+							<input type="text" class="data-item not-pie-item" name="sub-title">
+						</label>
+						<label>
+							<var id="lang_chart_x_title"></var>
+							<input type="text" class="data-item not-pie-item" name="x-title">
+						</label>
+						<label>
+							<var id="lang_chart_y_title"></var>
+							<input type="text" class="data-item not-pie-item" name="y-title">
+						</label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend><var id="lang_chart_tip"></var></legend>
+					<div class="format-item-container">
+						<label>
+							<var id="lang_cahrt_tip_prefix"></var>
+							<input type="text" class="data-item" disabled="disabled" name="tip" id="tipInput">
+						</label>
+						<p><var id="lang_cahrt_tip_description"></var></p>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend><var id="lang_chart_data_unit"></var></legend>
+					<div class="format-item-container">
+						<label>
+							<var id="lang_chart_data_unit_title"></var>
+							<input type="text" class="data-item" name="unit">
+						</label>
+						<p><var id="lang_chart_data_unit_description"></var></p>
+					</div>
+				</fieldset>
+			</div>
+		</form>
+	</div>
+	<div class="charts-view">
+		<div class="charts-container" id="chartsContainer"></div>
+		<div class="charts-type" id="chartsType">
+			<h3><var id="lang_chart_type"></var></h3>
+			<div class="scroll-view">
+				<div class="scroll-container"><div class="scroll-bed" id="scrollBed"></div></div>
+				<div class="button-container" id="buttonContainer">
+					<a href="#" data-title="prev"><var id="lang_prev_btn"></var></a>
+					<a href="#" data-title="next"><var id="lang_next_btn"></var></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../internal.js"></script>
+<script type="text/javascript" src="../../third-party/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../third-party/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="chart.config.js"></script>
+<script type="text/javascript" src="charts.js"></script>
+</body>
+</html>

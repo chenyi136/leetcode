@@ -1,0 +1,58 @@
+{
+	"imageActionName":"uploadimage",
+	"imageAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],
+	"imageCompressBorder":1600,
+	"imageCompressEnable":true,
+	"imageFieldName":"upfile",
+	"imageInsertAlign":"none",
+	"imageMaxSize":2048000,
+	"imagePathFormat":"/ueditor/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"imageUrlPrefix":"",
+	
+	"snapscreenActionName":"uploadimage",
+	"snapscreenInsertAlign":"none",
+	"snapscreenPathFormat":"/ueditor/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"snapscreenUrlPrefix":"",
+	
+	"videoActionName":"uploadvideo",
+	"videoAllowFiles":[".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid"],
+	"videoFieldName":"upfile",
+	"videoMaxSize":102400000,
+	"videoPathFormat":"/ueditor/video/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"videoUrlPrefix":"",
+
+	"fileActionName":"uploadfile",
+	"fileAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"],
+	"fileFieldName":"upfile",
+	"fileMaxSize":51200000,
+	"filePathFormat":"/ueditor/file/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"fileUrlPrefix":"",
+	
+	"scrawlActionName":"uploadscrawl",
+	"scrawlFieldName":"upscrawl",
+	"scrawlInsertAlign":"none",
+	"scrawlMaxSize":2048000,
+	"scrawlPathFormat":"/ueditor/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"scrawlUrlPrefix":"",
+	
+	"catcherActionName":"catchimage",
+	"catcherAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],
+	"catcherFieldName":"source",
+	"catcherLocalDomain":["127.0.0.1","localhost","img.baidu.com"],
+	"catcherMaxSize":2048000,
+	"catcherPathFormat":"/ueditor/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+	"catcherUrlPrefix":"",
+
+	"imageManagerActionName":"listimage",
+	"imageManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp"],
+	"imageManagerInsertAlign":"none",
+	"imageManagerListPath":"/ueditor/image/",
+	"imageManagerListSize":200,
+	"imageManagerUrlPrefix":"",
+
+	"fileManagerActionName":"listfile",
+	"fileManagerAllowFiles":[".png",".jpg",".jpeg",".gif",".bmp",".flv",".swf",".mkv",".avi",".rm",".rmvb",".mpeg",".mpg",".ogg",".ogv",".mov",".wmv",".mp4",".webm",".mp3",".wav",".mid",".rar",".zip",".tar",".gz",".7z",".bz2",".cab",".iso",".doc",".docx",".xls",".xlsx",".ppt",".pptx",".pdf",".txt",".md",".xml"],
+	"fileManagerListPath":"/ueditor/file/",
+	"fileManagerListSize":20,
+	"fileManagerUrlPrefix":""
+}

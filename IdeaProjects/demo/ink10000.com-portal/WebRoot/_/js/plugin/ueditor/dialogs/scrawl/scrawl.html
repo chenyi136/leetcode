@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,nofollow"/>
+	<script type="text/javascript" src="../internal.js"></script>
+	<link rel="stylesheet" type="text/css" href="scrawl.css">
+</head>
+<body>
+<div class="main" id="J_wrap">
+	<div class="hot">
+		<div class="drawBoard border_style1">
+			<canvas class="brushBorad" width="360" height="300" id="J_brushBoard"></canvas>
+			<div style="width:360px;height:300px;" class="picBoard" id="J_picBoard"></div>
+		</div>
+		<div class="operateBar" id="J_operateBar">
+			<span class="previousStep" id="J_previousStep">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_previousStep"></var></em>
+			</span>
+			<span class="nextStep" id="J_nextStep">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_nextsStep"></var></em>
+			</span>
+			<span class="clearBoard" id="J_clearBoard">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_clear"></var></em>
+			</span>
+			<span class="scaleBoard" id="J_sacleBoard">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_ScalePic"></var></em>
+			</span>
+		</div>
+	</div>
+	<div class="drawToolbar border_style1">
+		<div class="colorBar" id="J_colorBar"></div>
+		<div class="sectionBar" id="J_brushBar">
+			<em class="brushIcon"></em>
+			<a href="javascript:;" class="size1">1</a>
+			<a href="javascript:;" class="size2">3</a>
+			<a href="javascript:;" class="size3">5</a>
+			<a href="javascript:;" class="size4">7</a>
+		</div>
+		<div class="sectionBar" id="J_eraserBar">
+			<em class="eraserIcon"></em>
+			<a href="javascript:;" class="size1">1</a>
+			<a href="javascript:;" class="size2">3</a>
+			<a href="javascript:;" class="size3">5</a>
+			<a href="javascript:;" class="size4">7</a>
+		</div>
+		<div class="sectionBar">
+			<div class="addImgH" id="J_addImg">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_addPic"></var></em>
+				<form class="addImgH_form" method="post" enctype="multipart/form-data" target="up" id="fileForm"><input type="file" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp" name="upfile" id="J_imgTxt"></form>
+				<iframe style="display:none;" name="up"></iframe>
+			</div>
+		</div>
+		<div class="sectionBar">
+			<span class="removeImg" id="J_removeImg">
+				<em class="icon"></em>
+				<em class="text"><var id="lang_input_removePic"></var></em>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="maskLayerNull" id="J_maskLayer"></div>
+<script type="text/javascript" src="scrawl.js"></script>
+<script type="text/javascript">
+var settings={
+	drawBrushSize:3,
+	drawBrushColor:"#4BACC6",
+	colorList:["C00000","FF0000","FFC000","FFFF00","92D050","00B050","00B0F0","0070C0","002060","7030A0","FFFFFF","000000","EEECE1","1F497D","4F81BD","C0504D","9BBB59","8064A2","4BACC6","F79646"],
+	saveNum:10
+};
+var scrawlObj=new scrawl(settings);
+scrawlObj.isCancelScrawl=false;
+dialog.onok=function(){
+	exec(scrawlObj);
+	return false;
+};
+dialog.oncancel=function(){
+	scrawlObj.isCancelScrawl=true;
+};
+</script>
+</body>
+</html>
