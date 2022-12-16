@@ -138,7 +138,7 @@
 
           <groupId>org.springframework</groupId>
           <artifactId>spring-beans</artifactId>
-          <version>4.1.7.RELEASE</version>
+          <version>5.2.20.RELEASE</version>
       </dependency>
 
       <dependency>
